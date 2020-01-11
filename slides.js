@@ -30,10 +30,6 @@ slideArea.addEventListener("click", () => {
 
 
 
-
-
-
-
 // mouse over randomness 
 // when user puts mouse over the slide area, put all of the images in a random place 
 
@@ -42,8 +38,16 @@ slideArea.addEventListener("mouseover", () => {
         const x = 100 * Math.random() -50;
         const y = 100 * Math.random() -50;
 
-
         image.style.transform = `translate(${x}px, ${y}px)`
     })
+});
 
+
+// mouse out event 
+// when user moves moves mouse away, move images back
+
+slideArea.addEventListener("mouseout", () => {
+    images.forEach(image => {
+        image.style.transform = "";
+    })
 });
