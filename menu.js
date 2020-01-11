@@ -5,7 +5,7 @@ const mainTag = document.querySelector("main")
 // when i click the toggle tag, toggle a class of open on the main tag 
 // and if its open, make the toggle tag says closed 
 // and if its closed, make the toggle tag say menu 
-toggleTag.addEventListener("click", function () {
+toggleTag.addEventListener("click", () => {
     mainTag.classList.toggle("open")
 
 

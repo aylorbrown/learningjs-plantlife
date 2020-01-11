@@ -8,7 +8,7 @@ let currentSlide = 0;
 let z = 1;
 
 // when i click the slide area, change the slide based on z index 
-slideArea.addEventListener("click", function () {
+slideArea.addEventListener("click", () => {
     currentSlide += 1;
 
     if(currentSlide > images.length -1) {
@@ -16,7 +16,14 @@ slideArea.addEventListener("click", function () {
     }
     z += 1;
 
+    // remove the animation from the style for every image - loop over each image, one by one 
+    // aka makes it so the fade continues after 5th photo
+    images.forEach( (image) => {
+        image.style.animation = "";
+    });
+
     // pick the right image 
     images[currentSlide].style.zIndex = z;
+    images[currentSlide].style.animation = "fade 0.5s";
 
 });
