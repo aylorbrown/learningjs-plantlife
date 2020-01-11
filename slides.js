@@ -10,6 +10,10 @@ let z = 1;
 // when i click the slide area, change the slide based on z index 
 slideArea.addEventListener("click", function () {
     currentSlide += 1;
+
+    if(currentSlide > images.length -1) {
+        currentSlide =0;
+    }
     z += 1;
 
     // pick the right image 
