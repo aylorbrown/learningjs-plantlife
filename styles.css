@@ -15,6 +15,8 @@ body {
 
     background-color: white; 
     color: #2a2a2a;
+    /* no scroll bar */
+    overflow-x: hidden;
 }
 
 nav {
@@ -32,6 +34,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 nav a {
@@ -39,6 +42,7 @@ nav a {
     text-decoration: none;
     margin: 5px 32px 5px 32px;
 }
+
 
 main {
     position: relative;
@@ -50,4 +54,18 @@ main {
 
 main.open {
     transform: translate(240px, 0);
+}
+
+a.toggle-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    text-decoration: none; 
+    color: #2a2a2a;
+}
+
+a.toggle-nav img {
+    margin: 0 5px 0 5px 0;
+    vertical-align: middle;
 }
