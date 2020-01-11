@@ -27,3 +27,23 @@ slideArea.addEventListener("click", () => {
     images[currentSlide].style.animation = "fade 0.5s";
 
 });
+
+
+
+
+
+
+
+// mouse over randomness 
+// when user puts mouse over the slide area, put all of the images in a random place 
+
+slideArea.addEventListener("mouseover", () => {
+    images.forEach(image => {
+        const x = 100 * Math.random() -50;
+        const y = 100 * Math.random() -50;
+
+
+        image.style.transform = `translate(${x}px, ${y}px)`
+    })
+
+});
