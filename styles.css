@@ -15,8 +15,6 @@ body {
 
     background-color: white; 
     color: #2a2a2a;
-    margin: 40px auto 40px auto;
-    width: 620px;
 }
 
 nav {
@@ -40,4 +38,11 @@ nav a {
     color: white;
     text-decoration: none;
     margin: 5px 32px 5px 32px;
+}
+
+main {
+    position: relative;
+    z-index: 1; 
+    background-color: white;
+    min-height: 100vh;
 }
